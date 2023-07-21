@@ -1,0 +1,79 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  main {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .main-content {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  aside {
+    flex: 0 0 200px; /* The sidebar will have a fixed width of 200px */
+    min-width: 200px; /* Set a minimum width for the sidebar */
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav {
+      display: none;
+    }
+  
+    main {
+      flex-direction: column;
+    }
+  
+    .main-content {
+      margin-right: 0; /* Remove margin in smaller screens */
+    }
+  
+    aside {
+      flex: 1; /* The sidebar will take full width in smaller screens */
+      min-width: 0; /* Reset the minimum width for smaller screens */
+      margin-top: 20px;
+    }
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 480px) {
+    main {
+      padding: 10px; /* Reduce padding for better mobile display */
+    }
+  }
